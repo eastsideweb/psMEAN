@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <SchemaVersion>2.0</SchemaVersion>
+        <ProjectGuid>{ef1292f5-1a98-4c94-9a9a-a220000f0807}</ProjectGuid>
+        <ProjectHome />
+        <ProjectView>ShowAllFiles</ProjectView>
+        <StartupFile>server.js</StartupFile>
+        <WorkingDirectory>.</WorkingDirectory>
+        <OutputPath>.</OutputPath>
+        <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+        <TypeScriptSourceMap>true</TypeScriptSourceMap>
+        <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+        <EnableTypeScript>true</EnableTypeScript>
+        <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+        <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+    <ItemGroup>
+        <Content Include="bower.json" />
+        <Content Include="package.json" />
+        <Content Include="LICENSE.md" />
+        <Content Include="README.md" />
+        <Compile Include="gruntfile.js" />
+        <Compile Include="karma.conf.js" />
+        <Compile Include="server.js" />
+        <Compile Include="config\config.js" />
+        <Compile Include="config\express.js" />
+        <Compile Include="config\init.js" />
+        <Compile Include="config\passport.js" />
+        <Content Include="public\humans.txt" />
+        <Content Include="public\robots.txt" />
+        <Compile Include="public\application.js" />
+        <Compile Include="public\config.js" />
+        <Compile Include="app\controllers\core.server.controller.js" />
+        <Compile Include="app\controllers\errors.server.controller.js" />
+        <Compile Include="app\controllers\users.server.controller.js" />
+        <Compile Include="app\models\user.server.model.js" />
+        <Compile Include="app\routes\core.server.routes.js" />
+        <Compile Include="app\routes\users.server.routes.js" />
+        <Compile Include="app\tests\user.server.model.test.js" />
+        <Content Include="app\views\404.server.view.html" />
+        <Content Include="app\views\500.server.view.html" />
+        <Content Include="app\views\index.server.view.html" />
+        <Content Include="app\views\layout.server.view.html" />
+        <Compile Include="app\controllers\users\users.authentication.server.controller.js" />
+        <Compile Include="app\controllers\users\users.authorization.server.controller.js" />
+        <Compile Include="app\controllers\users\users.password.server.controller.js" />
+        <Compile Include="app\controllers\users\users.profile.server.controller.js" />
+        <Content Include="app\views\templates\reset-password-confirm-email.server.view.html" />
+        <Content Include="app\views\templates\reset-password-email.server.view.html" />
+        <Compile Include="config\env\all.js" />
+        <Compile Include="config\env\development.js" />
+        <Compile Include="config\env\production.js" />
+        <Compile Include="config\env\secure.js" />
+        <Compile Include="config\env\test.js" />
+        <Compile Include="config\strategies\facebook.js" />
+        <Compile Include="config\strategies\github.js" />
+        <Compile Include="config\strategies\google.js" />
+        <Compile Include="config\strategies\linkedin.js" />
+        <Compile Include="config\strategies\local.js" />
+        <Compile Include="config\strategies\twitter.js" />
+        <Content Include="public\lib\angular\angular-csp.css" />
+        <Content Include="public\lib\angular\.bower.json" />
+        <Content Include="public\lib\angular\bower.json" />
+        <Content Include="public\lib\angular\package.json" />
+        <Content Include="public\lib\angular\README.md" />
+        <Compile Include="public\lib\angular\angular.js" />
+        <Compile Include="public\lib\angular\angular.min.js" />
+        <Content Include="public\lib\angular-animate\.bower.json" />
+        <Content Include="public\lib\angular-animate\bower.json" />
+        <Content Include="public\lib\angular-animate\package.json" />
+        <Content Include="public\lib\angular-animate\README.md" />
+        <Compile Include="public\lib\angular-animate\angular-animate.js" />
+        <Compile Include="public\lib\angular-animate\angular-animate.min.js" />
+        <Content Include="public\lib\angular-bootstrap\.bower.json" />
+        <Content Include="public\lib\angular-bootstrap\bower.json" />
+        <Compile Include="public\lib\angular-bootstrap\ui-bootstrap-tpls.js" />
+        <Compile Include="public\lib\angular-bootstrap\ui-bootstrap-tpls.min.js" />
+        <Compile Include="public\lib\angular-bootstrap\ui-bootstrap.js" />
+        <Compile Include="public\lib\angular-bootstrap\ui-bootstrap.min.js" />
+        <Content Include="public\lib\angular-cookies\.bower.json" />
+        <Content Include="public\lib\angular-cookies\bower.json" />
+        <Content Include="public\lib\angular-cookies\package.json" />
+        <Content Include="public\lib\angular-cookies\README.md" />
+        <Compile Include="public\lib\angular-cookies\angular-cookies.js" />
+        <Compile Include="public\lib\angular-cookies\angular-cookies.min.js" />
+        <Content Include="public\lib\angular-mocks\.bower.json" />
+        <Content Include="public\lib\angular-mocks\bower.json" />
+        <Content Include="public\lib\angular-mocks\package.json" />
+        <Content Include="public\lib\angular-mocks\README.md" />
+        <Compile Include="public\lib\angular-mocks\angular-mocks.js" />
+        <Content Include="public\lib\angular-resource\.bower.json" />
+        <Content Include="public\lib\angular-resource\bower.json" />
+        <Content Include="public\lib\angular-resource\package.json" />
+        <Content Include="public\lib\angular-resource\README.md" />
+        <Compile Include="public\lib\angular-resource\angular-resource.js" />
+        <Compile Include="public\lib\angular-resource\angular-resource.min.js" />
+        <Content Include="public\lib\angular-sanitize\.bower.json" />
+        <Content Include="public\lib\angular-sanitize\bower.json" />
+        <Content Include="public\lib\angular-sanitize\package.json" />
+        <Content Include="public\lib\angular-sanitize\README.md" />
+        <Compile Include="public\lib\angular-sanitize\angular-sanitize.js" />
+        <Compile Include="public\lib\angular-sanitize\angular-sanitize.min.js" />
+        <Content Include="public\lib\angular-touch\.bower.json" />
+        <Content Include="public\lib\angular-touch\bower.json" />
+        <Content Include="public\lib\angular-touch\package.json" />
+        <Content Include="public\lib\angular-touch\README.md" />
+        <Compile Include="public\lib\angular-touch\angular-touch.js" />
+        <Compile Include="public\lib\angular-touch\angular-touch.min.js" />
+        <Content Include="public\lib\angular-ui-router\.bower.json" />
+        <Content Include="public\lib\angular-ui-router\bower.json" />
+        <Content Include="public\lib\angular-ui-router\CHANGELOG.md" />
+        <Content Include="public\lib\angular-ui-router\CONTRIBUTING.md" />
+        <Content Include="public\lib\angular-ui-router\README.md" />
+        <Content Include="public\lib\angular-ui-utils\.bower.json" />
+        <Content Include="public\lib\angular-ui-utils\bower.json" />
+        <Content Include="public\lib\angular-ui-utils\CHANGELOG.md" />
+        <Compile Include="public\lib\angular-ui-utils\ui-utils-ieshiv.js" />
+        <Compile Include="public\lib\angular-ui-utils\ui-utils-ieshiv.min.js" />
+        <Compile Include="public\lib\angular-ui-utils\ui-utils.js" />
+        <Compile Include="public\lib\angular-ui-utils\ui-utils.min.js" />
+        <Content Include="public\lib\bootstrap\.bower.json" />
+        <Content Include="public\lib\bootstrap\bower.json" />
+        <Content Include="public\lib\bootstrap\package.json" />
+        <Content Include="public\lib\bootstrap\README.md" />
+        <Compile Include="public\lib\bootstrap\Gruntfile.js" />
+        <Compile Include="public\lib\bootstrap\package.js" />
+        <Content Include="public\lib\jquery\MIT-LICENSE.txt" />
+        <Content Include="public\lib\jquery\.bower.json" />
+        <Content Include="public\lib\jquery\bower.json" />
+        <TypeScriptCompile Include="public\lib\angular-ui-router\api\angular-ui-router.d.ts" />
+        <Compile Include="public\lib\angular-ui-router\release\angular-ui-router.js" />
+        <Compile Include="public\lib\angular-ui-router\release\angular-ui-router.min.js" />
+        <Compile Include="public\lib\angular-ui-router\src\common.js" />
+        <Compile Include="public\lib\angular-ui-router\src\resolve.js" />
+        <Compile Include="public\lib\angular-ui-router\src\state.js" />
+        <Compile Include="public\lib\angular-ui-router\src\stateDirectives.js" />
+        <Compile Include="public\lib\angular-ui-router\src\stateFilters.js" />
+        <Compile Include="public\lib\angular-ui-router\src\templateFactory.js" />
+        <Compile Include="public\lib\angular-ui-router\src\urlMatcherFactory.js" />
+        <Compile Include="public\lib\angular-ui-router\src\urlRouter.js" />
+        <Compile Include="public\lib\angular-ui-router\src\view.js" />
+        <Compile Include="public\lib\angular-ui-router\src\viewDirective.js" />
+        <Compile Include="public\lib\angular-ui-router\src\viewScroll.js" />
+        <Content Include="public\lib\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+        <Content Include="public\lib\bootstrap\grunt\configBridge.json" />
+        <Compile Include="public\lib\bootstrap\grunt\bs-commonjs-generator.js" />
+        <Compile Include="public\lib\bootstrap\grunt\bs-glyphicons-data-generator.js" />
+        <Compile Include="public\lib\bootstrap\grunt\bs-lessdoc-parser.js" />
+        <Compile Include="public\lib\bootstrap\grunt\bs-raw-files-generator.js" />
+        <Compile Include="public\lib\bootstrap\js\affix.js" />
+        <Compile Include="public\lib\bootstrap\js\alert.js" />
+        <Compile Include="public\lib\bootstrap\js\button.js" />
+        <Compile Include="public\lib\bootstrap\js\carousel.js" />
+        <Compile Include="public\lib\bootstrap\js\collapse.js" />
+        <Compile Include="public\lib\bootstrap\js\dropdown.js" />
+        <Compile Include="public\lib\bootstrap\js\modal.js" />
+        <Compile Include="public\lib\bootstrap\js\popover.js" />
+        <Compile Include="public\lib\bootstrap\js\scrollspy.js" />
+        <Compile Include="public\lib\bootstrap\js\tab.js" />
+        <Compile Include="public\lib\bootstrap\js\tooltip.js" />
+        <Compile Include="public\lib\bootstrap\js\transition.js" />
+        <Content Include="public\lib\bootstrap\less\.csscomb.json" />
+        <Content Include="public\lib\bootstrap\dist\css\bootstrap-theme.css" />
+        <Content Include="public\lib\bootstrap\dist\css\bootstrap-theme.min.css" />
+        <Content Include="public\lib\bootstrap\dist\css\bootstrap.css" />
+        <Content Include="public\lib\bootstrap\dist\css\bootstrap.min.css" />
+        <Content Include="public\lib\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+        <Compile Include="public\lib\bootstrap\dist\js\bootstrap.js" />
+        <Compile Include="public\lib\bootstrap\dist\js\bootstrap.min.js" />
+        <Compile Include="public\lib\bootstrap\dist\js\npm.js" />
+        <Compile Include="public\lib\jquery\dist\jquery.js" />
+        <Compile Include="public\lib\jquery\dist\jquery.min.js" />
+        <Compile Include="public\lib\jquery\src\ajax.js" />
+        <Compile Include="public\lib\jquery\src\attributes.js" />
+        <Compile Include="public\lib\jquery\src\callbacks.js" />
+        <Compile Include="public\lib\jquery\src\core.js" />
+        <Compile Include="public\lib\jquery\src\css.js" />
+        <Compile Include="public\lib\jquery\src\data.js" />
+        <Compile Include="public\lib\jquery\src\deferred.js" />
+        <Compile Include="public\lib\jquery\src\deprecated.js" />
+        <Compile Include="public\lib\jquery\src\dimensions.js" />
+        <Compile Include="public\lib\jquery\src\effects.js" />
+        <Compile Include="public\lib\jquery\src\event.js" />
+        <Compile Include="public\lib\jquery\src\intro.js" />
+        <Compile Include="public\lib\jquery\src\jquery.js" />
+        <Compile Include="public\lib\jquery\src\manipulation.js" />
+        <Compile Include="public\lib\jquery\src\offset.js" />
+        <Compile Include="public\lib\jquery\src\outro.js" />
+        <Compile Include="public\lib\jquery\src\queue.js" />
+        <Compile Include="public\lib\jquery\src\selector-native.js" />
+        <Compile Include="public\lib\jquery\src\selector-sizzle.js" />
+        <Compile Include="public\lib\jquery\src\selector.js" />
+        <Compile Include="public\lib\jquery\src\serialize.js" />
+        <Compile Include="public\lib\jquery\src\traversing.js" />
+        <Compile Include="public\lib\jquery\src\wrap.js" />
+        <Compile Include="public\lib\jquery\src\ajax\jsonp.js" />
+        <Compile Include="public\lib\jquery\src\ajax\load.js" />
+        <Compile Include="public\lib\jquery\src\ajax\parseJSON.js" />
+        <Compile Include="public\lib\jquery\src\ajax\parseXML.js" />
+        <Compile Include="public\lib\jquery\src\ajax\script.js" />
+        <Compile Include="public\lib\jquery\src\ajax\xhr.js" />
+        <Compile Include="public\lib\jquery\src\attributes\attr.js" />
+        <Compile Include="public\lib\jquery\src\attributes\classes.js" />
+        <Compile Include="public\lib\jquery\src\attributes\prop.js" />
+        <Compile Include="public\lib\jquery\src\attributes\support.js" />
+        <Compile Include="public\lib\jquery\src\attributes\val.js" />
+        <Compile Include="public\lib\jquery\src\core\access.js" />
+        <Compile Include="public\lib\jquery\src\core\init.js" />
+        <Compile Include="public\lib\jquery\src\core\parseHTML.js" />
+        <Compile Include="public\lib\jquery\src\core\ready.js" />
+        <Compile Include="public\lib\jquery\src\css\addGetHookIf.js" />
+        <Compile Include="public\lib\jquery\src\css\curCSS.js" />
+        <Compile Include="public\lib\jquery\src\css\defaultDisplay.js" />
+        <Compile Include="public\lib\jquery\src\css\hiddenVisibleSelectors.js" />
+        <Compile Include="public\lib\jquery\src\css\support.js" />
+        <Compile Include="public\lib\jquery\src\css\swap.js" />
+        <Compile Include="public\lib\jquery\src\data\accepts.js" />
+        <Compile Include="public\lib\jquery\src\data\Data.js" />
+        <Compile Include="public\lib\jquery\src\effects\animatedSelector.js" />
+        <Compile Include="public\lib\jquery\src\effects\Tween.js" />
+        <Compile Include="public\lib\jquery\src\event\ajax.js" />
+        <Compile Include="public\lib\jquery\src\event\alias.js" />
+        <Compile Include="public\lib\jquery\src\event\support.js" />
+        <Compile Include="public\lib\jquery\src\exports\amd.js" />
+        <Compile Include="public\lib\jquery\src\exports\global.js" />
+        <Compile Include="public\lib\jquery\src\manipulation\support.js" />
+        <Compile Include="public\lib\jquery\src\manipulation\_evalUrl.js" />
+        <Compile Include="public\lib\jquery\src\queue\delay.js" />
+        <Compile Include="public\lib\jquery\src\traversing\findFilter.js" />
+        <Compile Include="public\lib\jquery\src\var\arr.js" />
+        <Compile Include="public\lib\jquery\src\var\class2type.js" />
+        <Compile Include="public\lib\jquery\src\var\concat.js" />
+        <Compile Include="public\lib\jquery\src\var\hasOwn.js" />
+        <Compile Include="public\lib\jquery\src\var\indexOf.js" />
+        <Compile Include="public\lib\jquery\src\var\pnum.js" />
+        <Compile Include="public\lib\jquery\src\var\push.js" />
+        <Compile Include="public\lib\jquery\src\var\rnotwhite.js" />
+        <Compile Include="public\lib\jquery\src\var\slice.js" />
+        <Compile Include="public\lib\jquery\src\var\strundefined.js" />
+        <Compile Include="public\lib\jquery\src\var\support.js" />
+        <Compile Include="public\lib\jquery\src\var\toString.js" />
+        <Compile Include="public\lib\jquery\src\ajax\var\nonce.js" />
+        <Compile Include="public\lib\jquery\src\ajax\var\rquery.js" />
+        <Compile Include="public\lib\jquery\src\core\var\rsingleTag.js" />
+        <Compile Include="public\lib\jquery\src\css\var\cssExpand.js" />
+        <Compile Include="public\lib\jquery\src\css\var\getStyles.js" />
+        <Compile Include="public\lib\jquery\src\css\var\isHidden.js" />
+        <Compile Include="public\lib\jquery\src\css\var\rmargin.js" />
+        <Compile Include="public\lib\jquery\src\css\var\rnumnonpx.js" />
+        <Compile Include="public\lib\jquery\src\data\var\data_priv.js" />
+        <Compile Include="public\lib\jquery\src\data\var\data_user.js" />
+        <Compile Include="public\lib\jquery\src\manipulation\var\rcheckableType.js" />
+        <Compile Include="public\lib\jquery\src\sizzle\dist\sizzle.js" />
+        <Compile Include="public\lib\jquery\src\sizzle\dist\sizzle.min.js" />
+        <Compile Include="public\lib\jquery\src\traversing\var\rneedsContext.js" />
+        <Compile Include="public\modules\core\core.client.module.js" />
+        <Compile Include="public\modules\users\users.client.module.js" />
+        <Compile Include="public\modules\core\config\core.client.routes.js" />
+        <Compile Include="public\modules\core\controllers\header.client.controller.js" />
+        <Compile Include="public\modules\core\controllers\home.client.controller.js" />
+        <Content Include="public\modules\core\css\core.css" />
+        <Compile Include="public\modules\core\services\menus.client.service.js" />
+        <Compile Include="public\modules\core\tests\header.client.controller.test.js" />
+        <Compile Include="public\modules\core\tests\home.client.controller.test.js" />
+        <Content Include="public\modules\core\views\header.client.view.html" />
+        <Content Include="public\modules\core\views\home.client.view.html" />
+        <Content Include="public\modules\core\img\brand\logo.png" />
+        <Content Include="public\modules\core\img\brand\favicon.ico" />
+        <Content Include="public\modules\core\img\loaders\loader.gif" />
+        <Compile Include="public\modules\users\config\users.client.config.js" />
+        <Compile Include="public\modules\users\config\users.client.routes.js" />
+        <Compile Include="public\modules\users\controllers\authentication.client.controller.js" />
+        <Compile Include="public\modules\users\controllers\password.client.controller.js" />
+        <Compile Include="public\modules\users\controllers\settings.client.controller.js" />
+        <Content Include="public\modules\users\css\users.css" />
+        <Compile Include="public\modules\users\services\authentication.client.service.js" />
+        <Compile Include="public\modules\users\services\users.client.service.js" />
+        <Compile Include="public\modules\users\tests\authentication.client.controller.test.js" />
+        <Content Include="public\modules\users\img\buttons\facebook.png" />
+        <Content Include="public\modules\users\img\buttons\github.png" />
+        <Content Include="public\modules\users\img\buttons\google.png" />
+        <Content Include="public\modules\users\img\buttons\linkedin.png" />
+        <Content Include="public\modules\users\img\buttons\twitter.png" />
+        <Content Include="public\modules\users\views\authentication\signin.client.view.html" />
+        <Content Include="public\modules\users\views\authentication\signup.client.view.html" />
+        <Content Include="public\modules\users\views\password\forgot-password.client.view.html" />
+        <Content Include="public\modules\users\views\password\reset-password-invalid.client.view.html" />
+        <Content Include="public\modules\users\views\password\reset-password-success.client.view.html" />
+        <Content Include="public\modules\users\views\password\reset-password.client.view.html" />
+        <Content Include="public\modules\users\views\settings\change-password.client.view.html" />
+        <Content Include="public\modules\users\views\settings\edit-profile.client.view.html" />
+        <Content Include="public\modules\users\views\settings\social-accounts.client.view.html" />
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="app" />
+        <Folder Include="app\controllers" />
+        <Folder Include="app\controllers\users" />
+        <Folder Include="app\models" />
+        <Folder Include="app\routes" />
+        <Folder Include="app\tests" />
+        <Folder Include="app\views" />
+        <Folder Include="app\views\templates" />
+        <Folder Include="config" />
+        <Folder Include="config\env" />
+        <Folder Include="config\sslcerts" />
+        <Folder Include="config\strategies" />
+        <Folder Include="public" />
+        <Folder Include="public\lib" />
+        <Folder Include="public\lib\angular" />
+        <Folder Include="public\lib\angular-animate" />
+        <Folder Include="public\lib\angular-bootstrap" />
+        <Folder Include="public\lib\angular-cookies" />
+        <Folder Include="public\lib\angular-mocks" />
+        <Folder Include="public\lib\angular-resource" />
+        <Folder Include="public\lib\angular-sanitize" />
+        <Folder Include="public\lib\angular-touch" />
+        <Folder Include="public\lib\angular-ui-router" />
+        <Folder Include="public\lib\angular-ui-router\api" />
+        <Folder Include="public\lib\angular-ui-router\release" />
+        <Folder Include="public\lib\angular-ui-router\src" />
+        <Folder Include="public\lib\angular-ui-utils" />
+        <Folder Include="public\lib\bootstrap" />
+        <Folder Include="public\lib\bootstrap\dist" />
+        <Folder Include="public\lib\bootstrap\dist\css" />
+        <Folder Include="public\lib\bootstrap\dist\fonts" />
+        <Folder Include="public\lib\bootstrap\dist\js" />
+        <Folder Include="public\lib\bootstrap\fonts" />
+        <Folder Include="public\lib\bootstrap\grunt" />
+        <Folder Include="public\lib\bootstrap\js" />
+        <Folder Include="public\lib\bootstrap\less" />
+        <Folder Include="public\lib\bootstrap\less\mixins" />
+        <Folder Include="public\lib\jquery" />
+        <Folder Include="public\lib\jquery\dist" />
+        <Folder Include="public\lib\jquery\src" />
+        <Folder Include="public\lib\jquery\src\ajax" />
+        <Folder Include="public\lib\jquery\src\ajax\var" />
+        <Folder Include="public\lib\jquery\src\attributes" />
+        <Folder Include="public\lib\jquery\src\core" />
+        <Folder Include="public\lib\jquery\src\core\var" />
+        <Folder Include="public\lib\jquery\src\css" />
+        <Folder Include="public\lib\jquery\src\css\var" />
+        <Folder Include="public\lib\jquery\src\data" />
+        <Folder Include="public\lib\jquery\src\data\var" />
+        <Folder Include="public\lib\jquery\src\effects" />
+        <Folder Include="public\lib\jquery\src\event" />
+        <Folder Include="public\lib\jquery\src\exports" />
+        <Folder Include="public\lib\jquery\src\manipulation" />
+        <Folder Include="public\lib\jquery\src\manipulation\var" />
+        <Folder Include="public\lib\jquery\src\queue" />
+        <Folder Include="public\lib\jquery\src\sizzle" />
+        <Folder Include="public\lib\jquery\src\sizzle\dist" />
+        <Folder Include="public\lib\jquery\src\traversing" />
+        <Folder Include="public\lib\jquery\src\traversing\var" />
+        <Folder Include="public\lib\jquery\src\var" />
+        <Folder Include="public\modules" />
+        <Folder Include="public\modules\core" />
+        <Folder Include="public\modules\core\config" />
+        <Folder Include="public\modules\core\controllers" />
+        <Folder Include="public\modules\core\css" />
+        <Folder Include="public\modules\core\img" />
+        <Folder Include="public\modules\core\img\brand" />
+        <Folder Include="public\modules\core\img\loaders" />
+        <Folder Include="public\modules\core\services" />
+        <Folder Include="public\modules\core\tests" />
+        <Folder Include="public\modules\core\views" />
+        <Folder Include="public\modules\users" />
+        <Folder Include="public\modules\users\config" />
+        <Folder Include="public\modules\users\controllers" />
+        <Folder Include="public\modules\users\css" />
+        <Folder Include="public\modules\users\img" />
+        <Folder Include="public\modules\users\img\buttons" />
+        <Folder Include="public\modules\users\services" />
+        <Folder Include="public\modules\users\tests" />
+        <Folder Include="public\modules\users\views" />
+        <Folder Include="public\modules\users\views\authentication" />
+        <Folder Include="public\modules\users\views\password" />
+        <Folder Include="public\modules\users\views\settings" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+    <ProjectExtensions>
+        <VisualStudio>
+          <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+            <WebProjectProperties>
+              <UseIIS>False</UseIIS>
+              <AutoAssignPort>True</AutoAssignPort>
+              <DevelopmentServerPort>0</DevelopmentServerPort>
+              <DevelopmentServerVPath>/</DevelopmentServerVPath>
+              <IISUrl>http://localhost:48022/</IISUrl>
+              <NTLMAuthentication>False</NTLMAuthentication>
+              <UseCustomServer>True</UseCustomServer>
+              <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+              <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+            </WebProjectProperties>
+          </FlavorProperties>
+          <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+            <WebProjectProperties>
+              <StartPageUrl>
+              </StartPageUrl>
+              <StartAction>CurrentPage</StartAction>
+              <AspNetDebugging>True</AspNetDebugging>
+              <SilverlightDebugging>False</SilverlightDebugging>
+              <NativeDebugging>False</NativeDebugging>
+              <SQLDebugging>False</SQLDebugging>
+              <ExternalProgram>
+              </ExternalProgram>
+              <StartExternalURL>
+              </StartExternalURL>
+              <StartCmdLineArguments>
+              </StartCmdLineArguments>
+              <StartWorkingDirectory>
+              </StartWorkingDirectory>
+              <EnableENC>False</EnableENC>
+              <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+            </WebProjectProperties>
+          </FlavorProperties>
+        </VisualStudio>
+    </ProjectExtensions>
+</Project>
